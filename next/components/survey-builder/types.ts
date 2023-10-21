@@ -1,12 +1,13 @@
 export type FollowUp = {
-  id: string | null
+  id: number | null
   MIN_RATING: number
   MAX_RATING: number
   question: TextQuestion
 }
 
 export type RatingQuestion = {
-  id: string | null
+  index: number
+  id: number | null
   __type: 'rating_question'
   question: string
   description?: string
@@ -14,13 +15,15 @@ export type RatingQuestion = {
 }
 
 export type SelectOption = {
-  id: string | null
+  index: number
+  id: number | null
   value: string
   label: string
 }
 
 export type SelectQuestion = {
-  id: string | null
+  id: number | null
+  index: number
   __type: 'select_question'
   question: string
   description?: string
@@ -28,21 +31,24 @@ export type SelectQuestion = {
 }
 
 export type TextQuestion = {
-  id: string | null
+  id: number | null
+  index: number
   __type: 'text_question'
   question: string
   description?: string
 }
 
 export type CloseQuestion = {
-  id: string | null
+  id: number | null
+  index: number
   __type: 'close_question'
   question: string
   description?: string
 }
 
 export type DocumentContent = {
-  id: string | null
+  id: number | null
+  index: number
   __type: 'document_content'
   title: string
   source: string
@@ -50,7 +56,8 @@ export type DocumentContent = {
 }
 
 export type ImageContent = {
-  id: string | null
+  id: number | null
+  index: number
   __type: 'image_content'
   title: string
   source: string
@@ -58,7 +65,8 @@ export type ImageContent = {
 }
 
 export type TitleContent = {
-  id: string | null
+  id: number | null
+  index: number
   __type: 'title_content'
   title: string
 }
@@ -73,12 +81,13 @@ export type Content =
   | CloseQuestion
 
 export type Slide = {
-  id: string | null
+  id: number | null
+  index: number
   content: Content[]
 }
 
 export type Presentation = {
-  id: string | null
+  id: number | null
   name: string
   description: string
   slides: Slide[]

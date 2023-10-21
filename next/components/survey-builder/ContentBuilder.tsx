@@ -45,6 +45,7 @@ const ContentBuilder = (props: Props) => {
       case 'document_content':
         onChange({
           id: content.id,
+          index: 0,
           __type: 'document_content',
           source: '',
           title: '',
@@ -54,6 +55,7 @@ const ContentBuilder = (props: Props) => {
       case 'image_content':
         onChange({
           id: content.id,
+          index: 0,
           __type: 'image_content',
           source: '',
           title: '',
@@ -61,11 +63,18 @@ const ContentBuilder = (props: Props) => {
         })
         return
       case 'rating_question':
-        onChange({ id: content.id, __type: 'rating_question', question: '', description: '' })
+        onChange({
+          id: content.id,
+          index: 0,
+          __type: 'rating_question',
+          question: '',
+          description: '',
+        })
         return
       case 'select_question':
         onChange({
           id: content.id,
+          index: 0,
           __type: 'select_question',
           question: '',
           description: '',
@@ -73,13 +82,25 @@ const ContentBuilder = (props: Props) => {
         })
         return
       case 'text_question':
-        onChange({ id: content.id, __type: 'text_question', question: '', description: '' })
+        onChange({
+          id: content.id,
+          index: 0,
+          __type: 'text_question',
+          question: '',
+          description: '',
+        })
         return
       case 'title_content':
-        onChange({ id: content.id, __type: 'title_content', title: '' })
+        onChange({ id: content.id, index: 0, __type: 'title_content', title: '' })
         break
       case 'close_question':
-        onChange({ id: content.id, __type: 'close_question', question: '', description: '' })
+        onChange({
+          id: content.id,
+          index: 0,
+          __type: 'close_question',
+          question: '',
+          description: '',
+        })
         break
       default:
     }

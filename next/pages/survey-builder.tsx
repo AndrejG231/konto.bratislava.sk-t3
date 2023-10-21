@@ -32,11 +32,18 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 }
 
 const AccountHelpPage = ({ page }: AsyncServerProps<typeof getServerSideProps>) => {
+  const initialP = {
+    description: '',
+    id: null,
+    name: '',
+    slides: [],
+  }
+
   return (
     <PageWrapper locale={page.locale} localizations={page.localizations}>
       <AccountPageLayout>
         <AccountSectionHeader title="Survey builder" />
-        <SurveyBuilder />
+        <SurveyBuilder initialPresentation={initialP} />
       </AccountPageLayout>
     </PageWrapper>
   )

@@ -3,13 +3,14 @@ import { useState } from 'react'
 import SlideBuilder from './SlideBuilder'
 import { Presentation, Slide } from './types'
 
-const SurveyBuilder = () => {
-  const [presentation, setPresentation] = useState<Presentation>({
-    description: '',
-    id: null,
-    name: '',
-    slides: [],
-  })
+type Props = {
+  initialPresentation: Presentation
+}
+
+const SurveyBuilder = (props: Props) => {
+  const { initialPresentation } = props
+
+  const [presentation, setPresentation] = useState<Presentation>(initialPresentation)
 
   const createSlideChangeHandler = (index: number) => {
     return (slide: Slide) =>
@@ -35,7 +36,10 @@ const SurveyBuilder = () => {
   }
 
   const addSlide = () => {
-    setPresentation((curr) => ({ ...curr, slides: [...curr.slides, { content: [], id: null }] }))
+    setPresentation((curr) => ({
+      ...curr,
+      slides: [...curr.slides, { content: [], id: null, index: 0 }],
+    }))
   }
 
   return (

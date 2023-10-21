@@ -12,7 +12,10 @@ const SelectQuestionBuilder = (props: Props) => {
   const [value, setValue] = useState('')
 
   function handleAdd() {
-    onChange({ ...content, options: [...content.options, { id: null, label: value, value }] })
+    onChange({
+      ...content,
+      options: [...content.options, { id: null, label: value, value, index: 0 }],
+    })
     setValue('')
   }
 
