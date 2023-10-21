@@ -13,4 +13,5 @@ export const ROUTES = {
   USER_PROFILE: '/moj-profil',
   MY_APPLICATIONS: '/moje-ziadosti',
   PAYMENT_RESULT: '/platba/stav',
+  PARTICIPATION: "/participation",
 }

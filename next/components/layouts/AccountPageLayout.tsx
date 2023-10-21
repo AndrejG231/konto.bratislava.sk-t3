@@ -94,7 +94,13 @@ const AccountPageLayout = ({
       url: ROUTES.TAXES_AND_FEES,
     },
     {
-      id: 4,
+      id: 3,
+      title: 'Participácia',
+      icon: <PaymentIcon className="h-6 w-6" />,
+      url: ROUTES.PARTICIPATION,
+    },
+    {
+      id: 5,
       title: 'account:account_section_help.navigation',
       icon: <HelpIcon className="h-6 w-6" />,
       url: ROUTES.HELP,
