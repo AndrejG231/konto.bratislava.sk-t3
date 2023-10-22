@@ -18,6 +18,7 @@ import { useServerSideAuth } from 'frontend/hooks/useServerSideAuth'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { ReactNode, useEffect } from 'react'
+import { LuHeartHandshake } from 'react-icons/lu'
 
 import { environment } from '../../environment'
 import { ROUTES } from '../../frontend/api/constants'
@@ -96,7 +97,7 @@ const AccountPageLayout = ({
     {
       id: 3,
       title: 'Participácia',
-      icon: <PaymentIcon className="h-6 w-6" />,
+      icon: <LuHeartHandshake className="h-6 w-6" />,
       url: ROUTES.PARTICIPATION,
     },
     {
