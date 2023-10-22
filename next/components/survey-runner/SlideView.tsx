@@ -7,10 +7,11 @@ import useSlideFields, { Fields } from './useSlideFields'
 type Props = {
   slide: Slide
   addValues: (fields: Fields) => void
+  hasMore: boolean
 }
 
 const SlideView = (props: Props) => {
-  const { slide, addValues } = props
+  const { slide, addValues, hasMore } = props
 
   const [fields, setFields] = useSlideFields(slide)
 
@@ -33,7 +34,6 @@ const SlideView = (props: Props) => {
 
   return (
     <div>
-      {JSON.stringify(fields)}
       {slide.content.map((content) => (
         <ContentView
           content={content}
@@ -47,7 +47,7 @@ const SlideView = (props: Props) => {
           onClick={handleNext}
           disabled={!isFilled}
           className={`
-          mx-auto mb-4 mt-2 rounded-md px-4 py-2
+          mx-auto mb-4 mt-2 rounded-md px-6 py-2
           ${
             !isFilled
               ? 'cursor-not-allowed bg-gray-400'
@@ -55,7 +55,7 @@ const SlideView = (props: Props) => {
           }
         `}
         >
-          Next
+          {hasMore ? 'Ďalej' : 'Odoslať'}
         </button>
       </div>
     </div>
