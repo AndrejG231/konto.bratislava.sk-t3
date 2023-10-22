@@ -36,7 +36,7 @@ const SlideBuilder = (props: Props) => {
   const onAdd = () => {
     onChange({
       ...slide,
-      content: [...slide.content, { id: null, __type: 'title_content', title: '' }],
+      content: [...slide.content, { id: null, __type: 'title_content', title: '', index: 0 }],
     })
   }
 
