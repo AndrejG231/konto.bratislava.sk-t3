@@ -110,7 +110,7 @@ const ContentBuilder = (props: Props) => {
     <div className="mt-4 rounded-lg border bg-gray-100 p-4 shadow-lg">
       <div className="mb-4">
         <label htmlFor="selectInput" className="block font-bold text-gray-700">
-          Choose an option:
+          What would you like to add?
           <select
             id="selectInput"
             name="selectInput"
@@ -119,13 +119,13 @@ const ContentBuilder = (props: Props) => {
             onChange={changeType}
             className="mt-2 w-full rounded-lg border px-3 py-2 text-gray-700"
           >
-            <option value="document_content">Document Content</option>
-            <option value="image_content">Image Content</option>
+            <option value="text_question">Text Question</option>
             <option value="rating_question">Rating Question</option>
             <option value="select_question">Select Question</option>
-            <option value="text_question">Text Question</option>
             <option value="close_question">Closed Question</option>
-            <option value="title_content">Title Content</option>
+            <option value="document_content">Attach Document</option>
+            <option value="image_content">Insert Image</option>
+            <option value="title_content">Section Title</option>
           </select>
         </label>
       </div>

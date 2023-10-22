@@ -36,7 +36,8 @@ const SlideBuilder = (props: Props) => {
   const onAdd = () => {
     onChange({
       ...slide,
-      content: [...slide.content, { id: null, __type: 'title_content', title: '', index: 0 }],
+      // content: [...slide.content, { id: null, __type: 'text_question', title: '', index: 0 }],
+      content: [...slide.content, { id: null, __type: 'text_question', question: '', index: 0 }],
     })
   }
 
@@ -56,14 +57,14 @@ const SlideBuilder = (props: Props) => {
           onClick={onAdd}
           className="m-1 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
         >
-          Add Content
+          Create Question or Add Content
         </button>
         <button
           type="button"
           onClick={onDelete}
           className="m-1 rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-600"
         >
-          Delete Slide
+          Delete Survey Section
         </button>
       </div>
     </div>

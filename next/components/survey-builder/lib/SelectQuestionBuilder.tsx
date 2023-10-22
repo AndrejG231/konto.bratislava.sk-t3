@@ -45,7 +45,7 @@ const SelectQuestionBuilder = (props: Props) => {
         />
       </label>
       <label htmlFor="description" className="mb-2 block font-bold text-gray-700">
-        Description:
+        Description (optional):
         <input
           value={content.description}
           onChange={({ target }: ChangeEvent<HTMLInputElement>) =>

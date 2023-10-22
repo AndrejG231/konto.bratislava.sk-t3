@@ -57,9 +57,9 @@ const SurveyBuilder = (props: Props) => {
         className="m-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
         type="button"
       >
-        Add Slide
+        Add Survey Section
       </button>
-      <pre>{JSON.stringify(presentation, null, 4)}</pre>
+      {/* <pre>{JSON.stringify(presentation, null, 4)}</pre> */}
     </div>
   )
 }
